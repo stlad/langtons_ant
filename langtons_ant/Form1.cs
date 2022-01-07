@@ -16,6 +16,7 @@ namespace langtons_ant
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.DrawString(ActiveModel.Map.ToString(), new Font("Arial", 20), Brushes.Black, new Point(20, 20));
+            //e.Graphics.DrawString((-6%5).ToString(), new Font("Arial", 20), Brushes.Black, new Point(10, 10));
         }
 
         public Form1()

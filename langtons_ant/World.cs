@@ -13,18 +13,23 @@ namespace langtons_ant
         public int Height { get; private set; }
 
         public List<List<Cell>> Table { get; set; }
+        public List<Ant> ants;
 
         public World(int w, int h)
         {
             Width = w;
             Height = h;
             Table = new List<List<Cell>>();
+
+            ants = new List<Ant>();
+            ants.Add(new Ant(1, 1));
+
+
             for (int i=0;i<Width;i++)
             {
                 Table.Add(new List<Cell>());
                 for(int j=0;j<Height;j++)
                 {
-                    //Table[i][j] = new Cell();
                     Table[i].Add(new Cell());
                 }
             }
@@ -37,7 +42,10 @@ namespace langtons_ant
             {
                 for (int j = 0; j < Height; j++)
                 {
-                    s.Append(((int)Table[i][j].state));
+                    if(ants.Where(n=> (n.X==i)&&(n.Y==j)).Count()!=0)
+                        s.Append("A");
+                    else
+                        s.Append(((int)Table[i][j].state));
                     s.Append(" ");
                 }
                 s.Append("\n");

@@ -13,6 +13,15 @@ namespace langtons_ant
             White,
             Black
         }
+        public enum Direction
+        {
+            Up,
+            Down,
+            Left,
+            Right
+        }
+
+        
         public World Map { get; set; }
         public Model()
         {
