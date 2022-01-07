@@ -8,6 +8,7 @@ namespace langtons_ant
 {
     public class World
     {
+        public Model ParentModel { get;private set; }
         public int Width { get; private set; }
 
         public int Height { get; private set; }
@@ -15,14 +16,15 @@ namespace langtons_ant
         public List<List<Cell>> Table { get; set; }
         public List<Ant> ants;
 
-        public World(int w, int h)
+        public World(int w, int h, Model parent)
         {
+            ParentModel = parent;
             Width = w;
             Height = h;
             Table = new List<List<Cell>>();
 
             ants = new List<Ant>();
-            ants.Add(new Ant(1, 1));
+            ants.Add(new Ant(ParentModel, 4, 4));
 
 
             for (int i=0;i<Width;i++)
