@@ -23,9 +23,12 @@ namespace langtons_ant
 
         public Dictionary<CellStates, Action<Ant>> Rules;
         public World Map { get; set; }
+
+        public int Step { get; private set; }
         public Model()
         {
-            Map = new World(10,10,this);
+            Step = 0;
+            Map = new World(50,50,this);
 
             Rules = new Dictionary<CellStates,Action<Ant>>();
             Rules[CellStates.White] = Ant.GoRight;
@@ -39,6 +42,7 @@ namespace langtons_ant
                 var state = ant.CheckState();
                 Rules[state](ant);
             }
+            Step++;
         }
     }
 

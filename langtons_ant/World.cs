@@ -24,7 +24,7 @@ namespace langtons_ant
             Table = new List<List<Cell>>();
 
             ants = new List<Ant>();
-            ants.Add(new Ant(ParentModel, 4, 4));
+            ants.Add(new Ant(ParentModel, 20, 20));
 
 
             for (int i=0;i<Width;i++)
