@@ -9,13 +9,14 @@ namespace langtons_ant
 {
     public class Ant
     {
+        public Model ParentModel { get; private set; }
         public Model.Direction Direction { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
 
-        public Ant(Point pt) => new Ant(pt.X, pt.Y);
-        public Ant(int x = 0, int y = 0)
+        public Ant(Model parent, int x = 0, int y = 0)
         {
+            ParentModel = parent;
             X = x;
             Y = y;
         }
@@ -50,8 +51,12 @@ namespace langtons_ant
             }    
         }
 
+
+        public Model.CellStates CheckState() => ParentModel.Map.Table[X][Y].state;
+
         public static void GoLeft(Ant ant)
         {
+            ant.ParentModel.Map.Table[ant.X][ant.Y].state = Model.CellStates.White;
             ant.Rotate(-1);
             ant.StepForward();
         }
@@ -59,6 +64,9 @@ namespace langtons_ant
         public static void GoRight(Ant ant)
         {
 
+            ant.ParentModel.Map.Table[ant.X][ant.Y].state = Model.CellStates.Black;
+            ant.Rotate(1);
+            ant.StepForward();
         }
 
 
