@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "langtons_ant", "langtons_ant\langtons_ant.csproj", "{CBCDEA56-A779-4ABE-A51D-123E8445AEAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBCDEA56-A779-4ABE-A51D-123E8445AEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCDEA56-A779-4ABE-A51D-123E8445AEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCDEA56-A779-4ABE-A51D-123E8445AEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCDEA56-A779-4ABE-A51D-123E8445AEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C7FDFA7-9865-4D4A-8352-629E9EC68CF5}
+	EndGlobalSection
+EndGlobal
